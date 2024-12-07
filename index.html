@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;1,6..12,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="icon">
+        <div>💰</div>
+      </div>
+      <div>Compound Interest Calculator</div>
+      <div class="icon">
+        <div>💵</div>
+      </div>
+    </header>
+    <section></section>
+    <main>
+      <div class="primary">
+        <div class="input">
+          <p>Principle:</p>
+          <input id="principle" />
+          <p>Interest Rate:</p>
+          <div>
+            <input
+              type="range"
+              id="rate"
+              min="0.25"
+              max="50"
+              value="2.5"
+              step="0.25"
+            />
+            <output id="rate-output"></output>
+          </div>
+          <p># of Compounds Per Year:</p>
+          <select id="compound">
+            <option value="360">daily</option>
+            <option value="12">monthly</option>
+            <option value="4">quarterly</option>
+            <option value="1">yearly</option>
+          </select>
+          <p># of Years</p>
+          <input id="years" />
+        </div>
+        <div class="output">
+          <p>Amount Earned: $<output id="earned"> </output></p>
+          <p>Total: $<output id="total"> </output></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>CSMI 2021 Web App</p>
+      <p>made with love</p>
+      <p>est. 2024</p>
+      <a
+        href="https://codesandbox.io/p/sandbox/crm-web-app-hw-1-hl5hck?layout=%257B%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522rootPanelGroup%2522%253A%257B%2522direction%2522%253A%2522horizontal%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522id%2522%253A%2522ROOT_LAYOUT%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522cm0x7aepa00063b5uxph61upa%2522%252C%2522sizes%2522%253A%255B100%255D%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522EDITOR%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522id%2522%253A%2522cm0x7aepa00023b5umjsi5y2e%2522%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522SHELLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522id%2522%253A%2522cm0x7aepa00033b5u6h5ffw7w%2522%257D%255D%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522DEVTOOLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522id%2522%253A%2522cm0x7aepa00053b5uzxxhf6tj%2522%257D%255D%257D%255D%252C%2522sizes%2522%253A%255B50%252C50%255D%257D%252C%2522tabbedPanels%2522%253A%257B%2522cm0x7aepa00023b5umjsi5y2e%2522%253A%257B%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522cm0x7aep900013b5uswx5i1n9%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522filepath%2522%253A%2522%252Findex.html%2522%252C%2522state%2522%253A%2522IDLE%2522%252C%2522initialSelections%2522%253A%255B%257B%2522startLineNumber%2522%253A17%252C%2522startColumn%2522%253A3%252C%2522endLineNumber%2522%253A17%252C%2522endColumn%2522%253A3%257D%255D%257D%252C%257B%2522id%2522%253A%2522cm0xg1o3s00023b5u30kzs1b0%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522initialSelections%2522%253A%255B%257B%2522startLineNumber%2522%253A21%252C%2522startColumn%2522%253A28%252C%2522endLineNumber%2522%253A21%252C%2522endColumn%2522%253A28%257D%255D%252C%2522filepath%2522%253A%2522%252Fcalculator.js%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%252C%257B%2522id%2522%253A%2522cm0yh249700023b5uaz44hpkz%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522initialSelections%2522%253A%255B%257B%2522startLineNumber%2522%253A15%252C%2522startColumn%2522%253A17%252C%2522endLineNumber%2522%253A15%252C%2522endColumn%2522%253A17%257D%255D%252C%2522filepath%2522%253A%2522%252Fstyles.css%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%255D%252C%2522id%2522%253A%2522cm0x7aepa00023b5umjsi5y2e%2522%252C%2522activeTabId%2522%253A%2522cm0x7aep900013b5uswx5i1n9%2522%257D%252C%2522cm0x7aepa00053b5uzxxhf6tj%2522%253A%257B%2522id%2522%253A%2522cm0x7aepa00053b5uzxxhf6tj%2522%252C%2522activeTabId%2522%253A%2522cm0y5yldo00703b5up04o76yv%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522cm0x7aepa00043b5ume0nka8m%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522UNASSIGNED_PORT%2522%252C%2522port%2522%253A0%257D%252C%257B%2522type%2522%253A%2522UNASSIGNED_PORT%2522%252C%2522port%2522%253A0%252C%2522id%2522%253A%2522cm0x835gm00123b5ubm7urnt0%2522%252C%2522mode%2522%253A%2522permanent%2522%257D%252C%257B%2522type%2522%253A%2522DOCS%2522%252C%2522id%2522%253A%2522cm0y5yldo00703b5up04o76yv%2522%252C%2522mode%2522%253A%2522permanent%2522%257D%255D%257D%252C%2522cm0x7aepa00033b5u6h5ffw7w%2522%253A%257B%2522tabs%2522%253A%255B%255D%252C%2522id%2522%253A%2522cm0x7aepa00033b5u6h5ffw7w%2522%257D%257D%252C%2522showDevtools%2522%253Atrue%252C%2522showShells%2522%253Afalse%252C%2522showSidebar%2522%253Atrue%252C%2522sidebarPanelSize%2522%253A15%257D"
+      >
+        source code
+      </a>
+    </footer>
+  </body>
+  <script src="calculator.js" defer></script>
+</html>
